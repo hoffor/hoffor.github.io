@@ -36,7 +36,7 @@
 window.onload = function()
 {
   var currentURL = window.location.href;
-  window.history.replaceState(“object or string”, “Title”, “/customtext”);
+  window.history.replaceState('', 'Title', '/customtext');
   const url = new URL(currentURL);
   const parsedHash = new URLSearchParams(url.hash.substring(1));
   document.getElementById("accessToken").value = parsedHash.get("access_token");
@@ -48,7 +48,7 @@ function copyToClipboard()
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  alert("Copied!")
+  alert("Copied!");
 }
 </script>
 
