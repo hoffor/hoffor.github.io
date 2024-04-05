@@ -36,7 +36,7 @@
 window.onload = function()
 {
   var currentURL = window.location.href;
-  window.history.replaceState('', 'Title', '/customtext');
+  window.history.replaceState('', 'Title', '/get_token.html'); // hide token from url bar
   const url = new URL(currentURL);
   const parsedHash = new URLSearchParams(url.hash.substring(1));
   document.getElementById("accessToken").value = parsedHash.get("access_token");
