@@ -36,6 +36,7 @@
 window.onload = function()
 {
   var currentURL = window.location.href;
+  window.history.replaceState(“object or string”, “Title”, “/customtext”);
   const url = new URL(currentURL);
   const parsedHash = new URLSearchParams(url.hash.substring(1));
   document.getElementById("accessToken").value = parsedHash.get("access_token");
